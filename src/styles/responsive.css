@@ -1,0 +1,124 @@
+/* Mobile Style */
+
+@media screen and (max-width: 652px) {
+    .navbar {
+        display: none;
+    }
+
+    .mobile-menu {
+        top: 0;
+        position: fixed;
+        z-index: 99999;
+    }
+
+    .nav-mobile {
+        top: 3em;
+        background-color: #FF5E14;
+        z-index: 9;
+        width: 100%;
+        position: fixed;
+        -webkit-transform: translate(-100%, 0);
+        transform: translate(-100%, 0);
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    .nav-mob-item {
+        display: list-item;
+        text-align: center;
+        width: 100%;
+    }
+
+    .empty-container {
+        min-height: 470px;
+    }
+
+    .card-list{
+        grid-template-columns: repeat(1, 1fr);;
+    }
+
+    .list,
+    .menu-detail,
+    .restaurant-profile {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (min-width: 653px) {
+    .mobile-menu {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: none;
+    }
+
+    .empty-container {
+        min-height: 470px;
+    }
+
+    .card-list{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .list,
+    .menu-detail,
+    .restaurant-profile {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .navbar{
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .nav-list ul{
+        flex-wrap: wrap;
+        column-gap: .5rem;
+    }
+
+    .card-list{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .list,
+    .menu-detail,
+    .restaurant-profile {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .card-list {
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 1.5em;
+        grid-row-gap: 1.5em;
+    }
+
+    .list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .menu-detail,
+    .restaurant-profile {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .menu-detail,
+    .restaurant-profile {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    main {
+        max-width: 1200px;
+    }
+}
